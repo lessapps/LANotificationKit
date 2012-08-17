@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'LANotificationKit' target in the 'LANotificationKit' project
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
