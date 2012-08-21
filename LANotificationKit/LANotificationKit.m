@@ -11,20 +11,20 @@
 static NSString *KEY_BLOCK_ID = @"id";
 
 
-@interface LANotificationCenter ()
+@interface LANotificationKit ()
 @property (nonatomic) BOOL hasNotificationCenter;
 @property (strong, nonatomic) NSMutableDictionary *didClickBlocks;
 @end
 
 
-@implementation LANotificationCenter
+@implementation LANotificationKit
 
-+ (LANotificationCenter *)sharedInstance
++ (LANotificationKit *)sharedInstance
 {
-    static LANotificationCenter *sharedInstance = nil;
+    static LANotificationKit *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[LANotificationCenter alloc] init];
+        sharedInstance = [[LANotificationKit alloc] init];
     });
     return sharedInstance;
 }

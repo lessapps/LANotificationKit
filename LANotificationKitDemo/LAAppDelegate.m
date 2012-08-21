@@ -18,7 +18,7 @@
 }
 - (IBAction)notifyButtonDidTap:(id)sender
 {
-    [[LANotificationCenter sharedInstance] notifyWithTitle:@"Title" description:@"Desc" didClickBlock:^{
+    [[LANotificationKit sharedInstance] notifyWithTitle:@"Title" description:@"Desc" didClickBlock:^{
         NSLog(@"Callback");
     }];
 }

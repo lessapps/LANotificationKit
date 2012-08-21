@@ -11,9 +11,9 @@
 
 typedef void (^DidClickBlock) (void);
 
-@interface LANotificationCenter : NSObject<GrowlApplicationBridgeDelegate, NSUserNotificationCenterDelegate>
+@interface LANotificationKit : NSObject<GrowlApplicationBridgeDelegate, NSUserNotificationCenterDelegate>
 
-+ (LANotificationCenter *)sharedInstance;
++ (LANotificationKit *)sharedInstance;
 
 - (id)init;
 
