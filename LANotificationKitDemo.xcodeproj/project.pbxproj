@@ -18,7 +18,6 @@
 		F5CC065E15DED94000A817D7 /* LANotificationKit.m in Sources */ = {isa = PBXBuildFile; fileRef = F5CC065D15DED94000A817D7 /* LANotificationKit.m */; };
 		F5CC066215DEDA8F00A817D7 /* LANotificationKit.h in Headers */ = {isa = PBXBuildFile; fileRef = F5CC065C15DED94000A817D7 /* LANotificationKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F5CC066C15DEDB7400A817D7 /* Growl.framework in Copy Growl 1.3 */ = {isa = PBXBuildFile; fileRef = F5CC066415DEDACD00A817D7 /* Growl.framework */; };
-		F5CC066E15DEDB9000A817D7 /* Growl.framework in Copy Growl 1.2.3 */ = {isa = PBXBuildFile; fileRef = F5CC066615DEDACD00A817D7 /* Growl.framework */; };
 		F5CC067215DEDCF800A817D7 /* LANotificationKit.framework in Copy LANotificationKit */ = {isa = PBXBuildFile; fileRef = F5CC065315DED93F00A817D7 /* LANotificationKit.framework */; };
 		F5CC067315DEDD1E00A817D7 /* LANotificationKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5CC065315DED93F00A817D7 /* LANotificationKit.framework */; };
 		F5CC067515DEDFB600A817D7 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = F5CC067415DEDFB600A817D7 /* License.txt */; };
@@ -45,17 +44,6 @@
 				F5CC066C15DEDB7400A817D7 /* Growl.framework in Copy Growl 1.3 */,
 			);
 			name = "Copy Growl 1.3";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F5CC066D15DEDB7800A817D7 /* Copy Growl 1.2.3 */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 12;
-			dstPath = Frameworks/Growl/1.2.3;
-			dstSubfolderSpec = 1;
-			files = (
-				F5CC066E15DEDB9000A817D7 /* Growl.framework in Copy Growl 1.2.3 */,
-			);
-			name = "Copy Growl 1.2.3";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		F5CC067115DEDCEA00A817D7 /* Copy LANotificationKit */ = {
@@ -91,8 +79,7 @@
 		F5CC065B15DED93F00A817D7 /* LANotificationKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LANotificationKit-Prefix.pch"; sourceTree = "<group>"; };
 		F5CC065C15DED94000A817D7 /* LANotificationKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LANotificationKit.h; sourceTree = "<group>"; };
 		F5CC065D15DED94000A817D7 /* LANotificationKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LANotificationKit.m; sourceTree = "<group>"; };
-		F5CC066415DEDACD00A817D7 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
-		F5CC066615DEDACD00A817D7 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
+		F5CC066415DEDACD00A817D7 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Growl.framework; path = Growl/Growl.framework; sourceTree = "<group>"; };
 		F5CC067415DEDFB600A817D7 /* License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,21 +127,13 @@
 		F5CC063015DED80400A817D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F5CC066315DEDACD00A817D7 /* Growl */,
+				F5CC066415DEDACD00A817D7 /* Growl.framework */,
 				F5CC063115DED80400A817D7 /* Cocoa.framework */,
-				F5CC063315DED80400A817D7 /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F5CC063315DED80400A817D7 /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
 				F5CC063415DED80400A817D7 /* AppKit.framework */,
 				F5CC063515DED80400A817D7 /* CoreData.framework */,
 				F5CC063615DED80400A817D7 /* Foundation.framework */,
 			);
-			name = "Other Frameworks";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F5CC063715DED80400A817D7 /* LANotificationKitDemo */ = {
@@ -200,23 +179,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F5CC066315DEDACD00A817D7 /* Growl */ = {
-			isa = PBXGroup;
-			children = (
-				F5CC066415DEDACD00A817D7 /* Growl.framework */,
-				F5CC066515DEDACD00A817D7 /* Legacy */,
-			);
-			path = Growl;
-			sourceTree = "<group>";
-		};
-		F5CC066515DEDACD00A817D7 /* Legacy */ = {
-			isa = PBXGroup;
-			children = (
-				F5CC066615DEDACD00A817D7 /* Growl.framework */,
-			);
-			path = Legacy;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -259,7 +221,6 @@
 				F5CC065015DED93F00A817D7 /* Headers */,
 				F5CC065115DED93F00A817D7 /* Resources */,
 				F5CC066B15DEDB5600A817D7 /* Copy Growl 1.3 */,
-				F5CC066D15DEDB7800A817D7 /* Copy Growl 1.2.3 */,
 			);
 			buildRules = (
 			);
@@ -529,6 +490,7 @@
 				F5CC064D15DED80500A817D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F5CC065F15DED94000A817D7 /* Build configuration list for PBXNativeTarget "LANotificationKit" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +499,7 @@
 				F5CC066115DED94000A817D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -54,13 +54,11 @@ static NSString *KEY_BLOCK_ID = @"id";
     
 	NSBundle *mainBundle = [NSBundle mainBundle];
 	NSString *path = [[mainBundle privateFrameworksPath] stringByAppendingPathComponent:@"LANotificationKit.framework/Frameworks/Growl"];
-	if(NSAppKitVersionNumber >= NSAppKitVersionNumber10_6)
-		path = [path stringByAppendingPathComponent:@"1.3"];
-	else
-		path = [path stringByAppendingPathComponent:@"1.2.3"];
-	
+		
+    path = [path stringByAppendingPathComponent:@"1.3"];
 	path = [path stringByAppendingPathComponent:@"Growl.framework"];
 	NSLog(@"path: %@", path);
+    
 	NSBundle *growlFramework = [NSBundle bundleWithPath:path];
 	if([growlFramework load])
 	{
@@ -77,7 +75,7 @@ static NSString *KEY_BLOCK_ID = @"id";
 
 -(NSDictionary *)registrationDictionaryForGrowl{
     NSArray *notifications;
-    notifications = [NSArray arrayWithObjects: [[[NSBundle mainBundle] infoDictionary]   objectForKey:@"CFBundleName"], nil];
+    notifications = @[ [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"] ];
     
     NSDictionary *dict;
     

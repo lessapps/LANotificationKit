@@ -15,6 +15,8 @@ typedef void (^DidClickBlock) (void);
 
 + (LANotificationCenter *)sharedInstance;
 
+- (id)init;
+
 - (void)notifyWithTitle:(NSString *)title
             description:(NSString *)description
           didClickBlock:(DidClickBlock)didClickBlockOrNil;
